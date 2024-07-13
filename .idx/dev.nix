@@ -20,6 +20,7 @@
     extensions = [
       "vscodevim.vim"
       "eamodio.gitlens"
+      "codezombiech.gitignore"
     ];
 
     # Enable previews
