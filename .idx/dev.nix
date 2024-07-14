@@ -11,6 +11,8 @@
     # pkgs.python311Packages.pip
     # pkgs.nodejs_20
     # pkgs.nodePackages.nodemon
+    pkgs.zsh
+    pkgs.oh-my-zsh
   ];
 
   # Sets environment variables in the workspace
