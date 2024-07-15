@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Profile from "./Profile";
+import Board from "./components/tictac/Board";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,9 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
+      </div>
+      <div>
+        <Board/>
       </div>
     </>
   );
