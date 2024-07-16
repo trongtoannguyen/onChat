@@ -19,7 +19,7 @@ function App() {
         </p>
       </div>
       <div>
-        <Board/>
+        <Board />
       </div>
     </>
   );
