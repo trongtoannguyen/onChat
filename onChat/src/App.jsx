@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Profile from "./Profile";
-import Board from "./components/tictac/Board";
+import Game from "./components/tictac/Game";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,7 +19,7 @@ function App() {
         </p>
       </div>
       <div>
-        <Board/>
+        <Game />
       </div>
     </>
   );
