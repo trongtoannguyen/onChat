@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import "./square.css";
+import React from "react";
 import Square from "./Square";
+import "./tictac.css";
 
-export default function Board() {
-  const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setValue] = useState(Array(9).fill(null));
-
+export default function Board({ xIsNext, squares, onPlay }) {
   let status;
   const winner = checkWinner(squares);
   if (winner) {
@@ -17,18 +14,18 @@ export default function Board() {
   }
 
   function handleClick(i) {
-    const nextValues = squares.slice();
-    if (nextValues[i] || checkWinner(nextValues)) {
+    if (squares[i] || checkWinner(squares)) {
       return;
     }
+
+    const nextSquares = squares.slice();
     if (xIsNext) {
-      nextValues[i] = "X";
+      nextSquares[i] = "X";
     } else {
-      nextValues[i] = "O";
+      nextSquares[i] = "O";
     }
-    checkWinner(nextValues);
-    setValue(nextValues);
-    setXIsNext(!xIsNext);
+    checkWinner(nextSquares);
+    onPlay(nextSquares);
   }
 
   return (
