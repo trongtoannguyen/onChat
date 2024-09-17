@@ -41,7 +41,7 @@
     "prop-types": "^15.8.1",
     "sass": "^1.77.8",
     "storybook": "^8.2.4",
-    "vite": "^5.3.1"
+    "vite": "^5.3.6"
   },
   "husky": {
     "hooks": {
